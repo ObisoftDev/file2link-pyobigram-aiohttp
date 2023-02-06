@@ -4,10 +4,18 @@ from pyobigram.inline import inlineKeyboardMarkup,inlineKeyboardButton
 from aiohttp import web
 import threading
 import asyncio
+import os
 
 BOT_TOKEN = ''
 API_ID = ''
 API_HASH = ''
+
+if 'BOT_TOKEN' in os.environ:
+    BOT_TOKEN == os.environ['BOT_TOKEN']
+if 'API_ID' in os.environ:
+    API_ID == os.environ['BOT_TOKEN']
+if 'API_HASH' in os.environ:
+    API_HASH = os.environ['API_HASH']
 HOST_ = 'http://pyobigram.file2link.ydns.eu/'
 
 bot:ObigramClient = None
